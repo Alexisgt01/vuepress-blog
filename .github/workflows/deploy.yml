@@ -28,6 +28,7 @@ jobs:
           path: src/.vuepress/dist
 
   deploy:
+    environment: production
     needs: build
     runs-on: ubuntu-latest
 
