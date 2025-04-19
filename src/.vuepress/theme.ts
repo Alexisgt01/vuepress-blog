@@ -53,13 +53,17 @@ export default hopeTheme({
     plugins: {
         blog: true,
 
-         //Install @waline/client before enabling it
-         //Note: This is for testing ONLY!
-         //You MUST generate and use your own comment service in production.
-         comment: {
-           provider: "Waline",
-           serverURL: "https:waline-comment.vuejs.press",
-         },
+        //Install @waline/client before enabling it
+        //Note: This is for testing ONLY!
+        //You MUST generate and use your own comment service in production.
+        comment: {
+            comment: true,
+            provider: "Giscus",
+            repo: "alexisgt01/vuepress-blog",
+            repoId: "R_kgDON6hIkg",
+            category: "General",
+            categoryId: "DIC_kwDON6hIks4CnBSI"
+        },
 
         components: {
             components: ["Badge", "VPCard"],

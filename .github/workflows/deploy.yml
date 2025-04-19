@@ -48,4 +48,7 @@ jobs:
 
       - name: Deploy to server
         run: |
-          rsync -avz --delete html/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.DEPLOY_PATH }}
+          rsync -avz --delete \
+            --exclude=nginx.conf \
+            --exclude=docker-compose.yml \
+            html/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.DEPLOY_PATH }}
